@@ -49,7 +49,7 @@ class App extends Component {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
-        'Authorization': `Bearer b6491f72-707c-460f-bf26-3c0fbedc3987`
+        'Authorization': `Bearer ${config.API_KEY}`
       }
     })
       .then(res => {
@@ -79,7 +79,7 @@ class App extends Component {
           <Nav />
           <div className='content' aria-live='polite'>
             <Route
-              exact path='/'
+              path='/bookmarks'
               component={BookmarkList}
             />
             <Route
